@@ -34,7 +34,7 @@ app.get('/', function(req, res){
 
 //---POSTGRES CONNECTION------
 
-var connectionString = "postgres://jon:mypassword@localhost/bulletinboard";
+var connectionString = 'postgres://' + process.env.POSTGRES_USER + ':' + process.env.POSTGRES_PASSWORD + '@localhost/bulletinboard';
 
 //----WRITE MESSAGES IN DB------
 
