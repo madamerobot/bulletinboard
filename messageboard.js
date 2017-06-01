@@ -62,6 +62,7 @@ app.post('/', function(req, res){
 			console.log("User info got inserted");
 			done();
 			pg.end();
+			// res.end();
 		});
 	});
 })

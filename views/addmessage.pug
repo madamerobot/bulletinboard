@@ -8,7 +8,7 @@ html
 		a(href='/allmessages') See all messages
 		br
 		br
-		form(action='/', method='POST')
+		form(action='/', method='POST' id='theform')
 			| Message Title:
 			br
 			input(type='text', placeholder='Message Title', name='title')
@@ -17,4 +17,13 @@ html
 			| 	  Message Body:
 			br
 			input(type='text', placeholder='Message Text', name='message')
-			input(type='submit', name='Submit your message')
+			input(type='submit' name='Submit your message' id="submitbtn")
+		p(id='thanks') Thank you!
+	script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+	script.
+		$('#thanks').hide();
+		$('#submitbtn').on('click', function() {
+		$('#theform').hide();
+		$('#thanks').show();
+		})
+

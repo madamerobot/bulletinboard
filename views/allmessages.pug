@@ -2,11 +2,16 @@ doctype html
 html
 	head
 		title All Messages
-		body
-			h3 Read all messages:
-			p.messages
-				each hit in info
-					p=hit.title
-					p=hit.body
-					p ___
+	body
+		a(href='/') Add a message
+		br
+		a(href='/allmessages') See all messages
+		br
+		br
+		h3 Read all messages:
+		p.messages
+			each hit in info
+				p=hit.title
+				p=hit.body
+				p ___
 			
