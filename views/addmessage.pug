@@ -1,0 +1,20 @@
+doctype html
+html
+	head
+		title Bulletinboard
+	body
+		a(href='/') Add a message
+		br
+		a(href='/allmessages') See all messages
+		br
+		br
+		form(action='/', method='POST')
+			| Message Title:
+			br
+			input(type='text', placeholder='Message Title', name='title')
+			br
+			br
+			| 	  Message Body:
+			br
+			input(type='text', placeholder='Message Text', name='message')
+			input(type='submit', name='Submit your message')

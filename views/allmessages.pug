@@ -1,0 +1,12 @@
+doctype html
+html
+	head
+		title All Messages
+		body
+			h3 Read all messages:
+			p.messages
+				each hit in info
+					p=hit.title
+					p=hit.body
+					p ___
+			
